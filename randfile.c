@@ -4,7 +4,19 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <sys/stat.h>
-
+/*
+int my_rand() {
+  int rfd = open(..);
+  int ran, err;
+  err = read(rfd, &ran, size(int));
+  if ( err < 0 ) {
+    printf("error: %d - %s\n", errno, strerror(errno));
+    return -1;
+    }
+  close(rfd);
+  return ran;
+}
+*/
 int randint(){
   int *buff = (int *)malloc(4);
   int fd = open("/dev/random", O_RDONLY);
