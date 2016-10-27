@@ -50,7 +50,12 @@ int main(){
     read(fd, buff, 4);
     printf("%d: %d\n", i, *buff);
   }
-  
+  /*
+  write(fd, rands, sizeof(int)*10);
+  fd = open("output.txt", O_RDONLY);
+  int rands2[10];
+  read(fd, rands2, sizeof(int)*10);
+  */
   
   close(fd);
   return 0;
