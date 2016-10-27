@@ -52,6 +52,7 @@ int main(){
   }
   /*
   write(fd, rands, sizeof(int)*10);
+  close(fd);
   fd = open("output.txt", O_RDONLY);
   int rands2[10];
   read(fd, rands2, sizeof(int)*10);
